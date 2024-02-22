@@ -3,12 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Recursos Basicos</title>
+	<title>Programación Avanzada</title>
 	{% load static %}
 	<link rel="stylesheet" type="text/css" href="articulo/static/index.css">
 </head>
 <body>
-	<h1> Recursos Basicos </h1>
+	
+	<h1> Bienvenidos a MFS Programación</h1>
 	{% include 'barradenavegacion.html' %}
 	<section>
 		{% for elemento in articulos %}
@@ -31,10 +32,29 @@
 			</textarea> <br>
 			<input type="submit" name="enviar" value="Enviar">
 			{% if mensaje %}
-			{{ mensaje }}
-			{% endif %}
-		</form>
+			<h2>{{ mensaje }}</h2>
+			{% endif %}</form>
+
+			<form action="index.html" method="GET">
+				<br> <h2>Tu Nombre </h2><br>
+            
+              <input type="text"  name="no">
+              <input type="submit" value="Buscar">
+
+			  </form>
+
+			  </form>
+
+			  <p>Resultado: <strong>{{query}}</strong></p>
+			  
+			  <p>Nombre encontrado: {{dato|length}}dato</p>
+
+
+
+
+
 	</section>
+
 
 </body>
 </html>
